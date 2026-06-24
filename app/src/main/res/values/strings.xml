@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pengamat Baterai</string>
+    <string name="label_max_percent">Batas Maksimal (%)</string>
+    <string name="label_min_percent">Batas Minimal (%)</string>
+    <string name="label_max_text">Teks Suara Batas Maksimal</string>
+    <string name="label_min_text">Teks Suara Batas Minimal</string>
+    <string name="label_enabled">Aktifkan Pengamat Baterai</string>
+    <string name="button_save">Simpan</string>
+    <string name="notification_channel_name">Pengamat Baterai</string>
+    <string name="notification_running_text">Memantau level baterai…</string>
+    <string name="saved_message">Pengaturan disimpan</string>
+    <string name="error_max_percent">Batas maksimal harus 0-100</string>
+    <string name="error_min_percent">Batas minimal harus 0-100</string>
+    <string name="error_min_lt_max">Batas minimal harus lebih kecil dari batas maksimal</string>
+</resources>
