@@ -74,7 +74,11 @@ class BatteryMonitorService : Service() {
         createNotificationChannel()
         val filter = IntentFilter(Intent.ACTION_BATTERY_CHANGED)
         filter.addAction(ACTION_STOP_ALERT)
-        val initialIntent = registerReceiver(batteryReceiver, filter)
+        val initialIntent = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            registerReceiver(batteryReceiver, filter, Context.RECEIVER_NOT_EXPORTED)
+        } else {
+            registerReceiver(batteryReceiver, filter)
+        }
         initialIntent?.let { handleBatteryIntent(it) }
     }
 
